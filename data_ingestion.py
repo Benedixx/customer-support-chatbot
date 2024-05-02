@@ -45,7 +45,7 @@ if __name__ == "__main__":
     print(f"Loaded {len(documents)} documents")
     
     for document in documents :
-        document.metadata["last_accessed_date"] = datetime.now()
+        document.metadata["last_accessed_date"] = "-"
     
     vector_store = PineconeVectorStore(pinecone_index=pc_index)
     storage_context = StorageContext.from_defaults(vector_store=vector_store)
