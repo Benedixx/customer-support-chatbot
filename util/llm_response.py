@@ -5,7 +5,7 @@ from llama_index.core import (
     Settings,
     VectorStoreIndex,
 )
-from vector_db import vector_store
+from util.vector_db import vector_store
 from llama_index.core.retrievers import VectorIndexRetriever
 from llama_index.vector_stores.postgres import PGVectorStore
 from llama_index.readers.file import PDFReader
@@ -41,6 +41,5 @@ if __name__ == "__main__" :
     llm = LLMResponse()
     response = llm.generate_response("what is the procedure of refund from nyanpasu store?")
     print(response)
-    pass
 
 
